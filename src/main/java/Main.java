@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws BadInputError {
 
         Menu bugers = new Menu("Bugers");
         Menu drinks = new Menu("Drinks");

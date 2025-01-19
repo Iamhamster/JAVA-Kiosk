@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Menu {
+public class Menu{
     // MenuItem 클래스를 List로 관리
     private List<MenuItem> Item = new ArrayList<>();
     private String menus;
+
+    List<MenuItem> Stream = List.of();
 
     Menu(String menus){
         this.menus = menus;
@@ -28,9 +30,10 @@ public class Menu {
 
     // List에 들어있는 MenuItem을 순차적으로 보여주는 함수
     public void showmenuitems(){
-        for (int i = 0; i < this.Item.size(); i++) {
+        Item.stream().forEach(item -> System.out.println((Item.indexOf(item) + 1) + ". " + item));//forEach 반복문
+        /*스트림 for (int i = 0; i < this.Item.size(); i++) {
             System.out.println((i+1)+". "+Item.get(i)); // get 조회
-        }
+        }*/
     }
 
     // List를 리턴하는 함수
